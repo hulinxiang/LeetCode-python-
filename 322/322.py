@@ -1,4 +1,5 @@
 import sys
+from typing import List
 
 '''使用动态规划来解题'''
 
