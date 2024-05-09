@@ -11,8 +11,9 @@ class Solution:
         def dfs(x: int) -> None:
             visit[x] = True  # 代表访问了这个节点
             for y in g[x]:
-                visit[y] = True
-                dfs(y)
+                if not visit[y]:
+                    visit[y] = True
+                    dfs(y)
 
         ans = [None] * n
         for i in range(n):
